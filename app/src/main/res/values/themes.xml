@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WarmHearts" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/darkMain</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="android:windowBackground">@color/darkMain</item>
+
+        <item name="android:navigationBarColor">@color/darkMain</item>
+    </style>
+
+
+</resources>
