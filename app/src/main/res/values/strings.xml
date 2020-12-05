@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Care</string>
+    <string name="service_channel">Service channel</string>
+    <string name="device_admin_description">Allow AlwaysOn to turn off your screen</string>
+    <string name="AlwaysOn">Always on display</string>
+    <string name="notification_listener_description">notification desc</string>
+    <string name="pref_admin_summary">admin_summary</string>
 
 </resources>

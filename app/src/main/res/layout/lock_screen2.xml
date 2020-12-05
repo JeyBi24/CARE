@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLockScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0002"
+    >
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:lottie_fileName="noise.json"
+        app:lottie_autoPlay="true"
+        android:scaleType="centerCrop"
+        app:lottie_loop="true"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDate"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        android:src="@drawable/image3"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        android:background="@drawable/shadow_bottom"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shadow_top"
+        />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:textSize="64dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineTop"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:fontFamily="@font/g_bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="am"
+        app:layout_constraintLeft_toRightOf="@id/textViewTime"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTime"
+        android:fontFamily="@font/g_bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp"
+        android:textSize="26sp"
+        android:layout_marginLeft="4dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewTime"
+        app:layout_constraintLeft_toLeftOf="@id/textViewTime"
+        app:layout_constraintRight_toRightOf="@id/textViewTime"
+        android:text="Saturday, 5 December 2020"
+        android:textColor="@color/white"
+        android:alpha="0.8"
+        android:fontFamily="@font/g_regular"
+        />
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_baseline"
+        app:layout_constraintLeft_toLeftOf="@id/textSwipe"
+        app:layout_constraintRight_toRightOf="@id/textSwipe"
+        app:layout_constraintBottom_toTopOf="@id/textSwipe"
+        android:layout_marginBottom="6dp"
+        />
+
+    <com.romainpiel.shimmer.ShimmerTextView
+        android:id="@+id/textSwipe"
+        app:reflectionColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="swipe to unlock"
+        android:textColor="@color/white"
+        android:layout_marginBottom="56dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/g_light"
+        />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/camera"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

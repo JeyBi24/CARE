@@ -2,13 +2,20 @@
     <!-- Base application theme. -->
     <style name="Theme.WarmHearts" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/darkMain</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
         <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
 
-        <item name="android:windowBackground">@color/darkMain</item>
 
-        <item name="android:navigationBarColor">@color/darkMain</item>
     </style>
 
+    <style name="LockScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 
 </resources>
