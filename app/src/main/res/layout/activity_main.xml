@@ -18,16 +18,477 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textCare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="CARE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/g_black"
+        android:textSize="32sp"
+        />
+
+    <TextView
+        android:id="@+id/textDecrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textCare"
+        app:layout_constraintTop_toBottomOf="@id/textCare"
+        android:text="Together we can decrease\nthese numbers!"
+        android:textColor="@color/white"
+        android:fontFamily="@font/g_semi_bold"
+        />
+
+    <TextView
+        android:id="@+id/textEnable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textDecrease"
+        app:layout_constraintBottom_toTopOf="@id/cardView"
+        android:layout_marginBottom="24dp"
+        android:text="Please enable our LockScreen to change thousands of lives with your just small effort!"
+        app:layout_constraintRight_toLeftOf="@id/switchTurnOn"
+        android:textColor="@color/white"
+        android:fontFamily="@font/g_regular"
+        />
+
+    <Switch
+        android:id="@+id/switchTurnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textEnable"
+        app:layout_constraintBottom_toBottomOf="@id/textEnable"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        />
+
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         app:cardCornerRadius="24dp"
         app:layout_constraintBottom_toBottomOf="@id/imageViewHeader"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageViewHeader" />
+        app:layout_constraintTop_toBottomOf="@id/imageViewHeader" >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <TextView
+                android:id="@+id/textNumberGoals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="102"
+                android:fontFamily="@font/g_black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                android:textSize="19sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/textNumberGoals"
+                app:layout_constraintRight_toRightOf="@id/textNumberGoals"
+                app:layout_constraintTop_toBottomOf="@id/textNumberGoals"
+                android:layout_marginTop="1dp"
+                android:text="Supported"
+                android:textSize="12sp"
+                android:fontFamily="@font/g_semi_bold"
+                />
+
+            <TextView
+                android:id="@+id/textAmountDonation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toRightOf="@id/textNumberGoals"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="100.000"
+                android:fontFamily="@font/g_black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                android:textSize="19sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/textAmountDonation"
+                app:layout_constraintRight_toRightOf="@id/textAmountDonation"
+                app:layout_constraintTop_toBottomOf="@id/textAmountDonation"
+                android:layout_marginTop="1dp"
+                android:text="Donated"
+                android:textSize="12sp"
+                android:fontFamily="@font/g_semi_bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/textAmountDonation"
+                app:layout_constraintBottom_toBottomOf="@id/textAmountDonation"
+                android:text="s"
+                android:fontFamily="@font/g_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="2dp"
+                />
+
+            <TextView
+                android:id="@+id/textAmountEarned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/textNumberGoals"
+                android:text="12.500"
+                android:fontFamily="@font/g_black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                android:textSize="19sp"
+                />
+
+            <TextView
+                android:id="@+id/textEarned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/textAmountEarned"
+                app:layout_constraintRight_toRightOf="@id/textAmountEarned"
+                app:layout_constraintTop_toBottomOf="@id/textAmountEarned"
+                android:layout_marginTop="1dp"
+                android:text="Earned by you"
+                android:textSize="12sp"
+                android:fontFamily="@font/g_semi_bold"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/textAmountEarned"
+                app:layout_constraintBottom_toBottomOf="@id/textAmountEarned"
+                android:text="s"
+                android:fontFamily="@font/g_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="2dp"
+                />
+
+
+            <RelativeLayout
+                android:clickable="true"
+                android:id="@+id/rvDonate"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textEarned"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bc_btn_donate"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Donate"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/g_bold"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="12dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/cardView"
+        app:layout_constraintRight_toRightOf="@id/cardView"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/left_red"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="5 yoshdan kichik bolalar bilan o'lim hodisasi butun O'zbekiston bo'ylab"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/g_black"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDeathCases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/g_black"
+                        android:layout_marginRight="18dp"
+                        android:textColor="@color/off"
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/left_nomoney"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Kam ta'minlanganlik darajasi (1 kunda 2100 kkal dan kam iste'mol qiluvchi aholi ulushi)"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/g_black"
+                        />
+
+                    <TextView
+                        android:id="@+id/textNoMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/g_black"
+                        android:layout_marginRight="18dp"
+                        android:textColor="#776d8a"
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/left_carrot"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Aholining yuqumli va parazitar kasalliklarga chalinishi (Kasallanishlar soni, ming)"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/g_black"
+                        />
+
+                    <TextView
+                        android:id="@+id/textIllness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/g_black"
+                        android:layout_marginRight="18dp"
+                        android:textColor="#fd8c04"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/left_softred"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Go'daklar o'limi 1000 tirik tugilganlarga nisbatan"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/g_black"
+                        />
+
+                    <TextView
+                        android:id="@+id/textInfantDeath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/g_black"
+                        android:layout_marginRight="18dp"
+                        android:textColor="#ec5858"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/left_retire"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Boquvchisini yo`qotganligi sababli tayinlangan pensiyalarsiz, yil oxiriga, ming kishi
+"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/g_black"
+                        />
+
+                    <TextView
+                        android:id="@+id/textRetirement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/g_black"
+                        android:layout_marginRight="18dp"
+                        android:textColor="#51adcf"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
